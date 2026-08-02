@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>洪小姐的工作台 · 药食同源固体饮料创业中枢</title>
+<meta name="theme-color" content="#2F4F4A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="洪小姐工作台">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">洪</div>
+    <div class="brand-text">
+      <div class="brand-title">洪小姐的工作台</div>
+      <div class="brand-sub">药食同源 · 固体饮料</div>
+    </div>
+  </div>
+
+  <nav class="nav" id="nav">
+    <button class="nav-item active" data-view="dashboard"><span class="ni">◎</span>今日看板</button>
+    <button class="nav-item" data-view="radar"><span class="ni">◇</span>热点雷达<em class="badge" id="badge-radar">0</em></button>
+    <button class="nav-item" data-view="ecom"><span class="ni">▦</span>电商爆款<em class="badge" id="badge-ecom">0</em></button>
+    <button class="nav-item" data-view="learn"><span class="ni">☰</span>学习路线</button>
+    <button class="nav-item" data-view="compliance"><span class="ni">⚠</span>合规红线</button>
+    <button class="nav-item" data-view="brand"><span class="ni">✦</span>品牌构思板</button>
+    <button class="nav-item" data-view="color"><span class="ni">◐</span>配色方案库</button>
+    <button class="nav-item" data-view="cases"><span class="ni">⌘</span>对标品牌</button>
+    <button class="nav-item" data-view="library"><span class="ni">▤</span>竞品资料库<em class="badge" id="badge-lib">0</em></button>
+    <button class="nav-item" data-view="stars"><span class="ni">★</span>我的星标<em class="badge" id="badge-star">0</em></button>
+  </nav>
+
+  <div class="side-foot">
+    <div class="upd" id="upd-info">数据更新中…</div>
+    <div class="side-actions">
+      <button class="mini" id="btn-export">导出备份</button>
+      <button class="mini" id="btn-import">导入备份</button>
+      <input type="file" id="file-import" accept="application/json" hidden>
+    </div>
+  </div>
+</aside>
+
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-btn" id="menu-btn" aria-label="打开目录">☰</button>
+      <div>
+        <h1 id="view-title">今日看板</h1>
+        <p id="view-desc" class="view-desc">今天要看什么、要学什么、要决定什么。</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="today" id="today"></div>
+    </div>
+  </header>
+
+  <section class="view" id="view-dashboard"></section>
+  <section class="view hidden" id="view-radar"></section>
+  <section class="view hidden" id="view-ecom"></section>
+  <section class="view hidden" id="view-learn"></section>
+  <section class="view hidden" id="view-compliance"></section>
+  <section class="view hidden" id="view-brand"></section>
+  <section class="view hidden" id="view-color"></section>
+  <section class="view hidden" id="view-cases"></section>
+  <section class="view hidden" id="view-library"></section>
+  <section class="view hidden" id="view-stars"></section>
+</main>
+
+<div class="modal-mask hidden" id="modal-mask">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modal-close">×</button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="data/knowledge.js"></script>
+<script src="data/feed.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
