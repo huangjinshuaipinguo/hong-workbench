@@ -1,0 +1,19 @@
+{
+  "name": "洪小姐的工作台 · 药食同源固体饮料创业中枢",
+  "short_name": "洪小姐工作台",
+  "description": "药食同源固体饮料品牌创业中枢：每日大健康热点、合规红线、配方分析、品牌构思与竞品资料库。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#F7F4ED",
+  "theme_color": "#2F4F4A",
+  "orientation": "portrait",
+  "categories": ["business", "health", "productivity"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
